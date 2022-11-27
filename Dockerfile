@@ -1,5 +1,5 @@
 FROM public.ecr.aws/docker/library/node:lts-slim
-RUN apt-get update && apt-get install git -y && apt-get install imagemagick -y;
+RUN apt-get update && apt-get install git -y
 
 WORKDIR /ecs-app
 
