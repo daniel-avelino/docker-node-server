@@ -13,6 +13,6 @@ RUN chown -R node:node /ecs-app
 ENV NODE_ENV=production
 ENV ENV_ECS=true
 USER sudo
-EXPOSE 8000
+EXPOSE 20000
 
 ENTRYPOINT ["npm", "start"]
