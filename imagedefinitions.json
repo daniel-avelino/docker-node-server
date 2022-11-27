@@ -1,6 +1,6 @@
 [
     {
         "name": "bootcamp-api",
-        "imageUri": "daniel-avelino/node-server"
+        "imageUri": "348961475208.dkr.ecr.us-east-1.amazonaws.com/web-app:latest"
     }
 ]
