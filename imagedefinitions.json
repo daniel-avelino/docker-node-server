@@ -1,6 +1,6 @@
 [
     {
-        "name": "web-app",
-        "imageUri": "daniel-avelino/web-app"
+        "name": "bootcamp-api",
+        "imageUri": "daniel-avelino/node-server"
     }
 ]
