@@ -1,18 +1,14 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const bodyParser = require('body-parser');
-const router = express.Router();
+const http = require('http');
 
-// Middlewares
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+const hostname = '0.0.0.0';
+const port = 3000;
 
-// API
-app.use('/', require('./controller/controller'));
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
 
-// Server
-const port = 20000;
-app.listen(port, function () {
-    console.log('listening on port:' + port);
+server.listen(port, hostname, () => {
+  console.log(`Server running`);
 });
