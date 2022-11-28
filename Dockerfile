@@ -8,6 +8,7 @@ COPY controller controller
 COPY server.js server.js
 
 RUN npm install
+COPY . .
 RUN chown -R node:node /ecs-app
 
 ENV NODE_ENV=production
