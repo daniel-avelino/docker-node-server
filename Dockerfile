@@ -1,19 +1,9 @@
-FROM public.ecr.aws/docker/library/node:lts-slim
-RUN apt-get update && apt-get install git -y
+FROM node:alpine
 
-WORKDIR /ecs-app
-
-COPY package*.json ./
-COPY controller controller
-COPY server.js server.js
-
+WORKDIR /app
+COPY package.json .
 RUN npm install
+
 COPY . .
-RUN chown -R node:node /ecs-app
 
-ENV NODE_ENV=production
-ENV ENV_ECS=true
-USER node
-EXPOSE 20000
-
-ENTRYPOINT ["npm", "start"]
+CMD ["npm", "start"]
